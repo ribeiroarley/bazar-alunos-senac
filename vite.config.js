@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+// Para garantir que o Vite use o caminho correto no GitHub Pages
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
