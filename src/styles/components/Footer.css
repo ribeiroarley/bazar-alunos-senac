@@ -1,0 +1,27 @@
+.footer {
+    background-color: var(--background-dark);
+    color: white;
+    padding: var(--space-xl) var(--space-md);
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 600px) {
+    .footer {
+      padding: var(--space-lg) var(--space-sm);
+    }
+  
+    .footer-info {
+      font-size: 0.85rem;
+      gap: var(--space-xs);
+    }
+  }
+  

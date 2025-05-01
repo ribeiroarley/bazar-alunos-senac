@@ -1,0 +1,19 @@
+{
+    "extends": ["plugin:react/recommended"],
+    "rules": {
+      "react-refresh/only-export-components": "off",
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "^[A-Z]",
+          "argsIgnorePattern": "^_",
+          "caughtErrorsIgnorePattern": "^_"
+        }
+      ]
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }

@@ -1,0 +1,53 @@
+@import '../global/variables.css';
+
+.checkout-page {
+  padding: var(--space-xl) 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.checkout-form {
+  display: grid;
+  gap: var(--space-lg);
+  background: white;
+  padding: var(--space-xl);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+}
+
+.form-section {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+  color: var(--text-dark);
+}
+
+.payment-methods {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.payment-method:hover {
+  border-color: var(--primary-color);
+}
+
+.order-summary {
+  background: var(--background-gray);
+  padding: var(--space-md);
+  border-radius: var(--border-radius-small);
+}
