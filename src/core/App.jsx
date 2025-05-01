@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from '../pages/Home';
 import Cart from '../pages/Cart';
 import Checkout from '../pages/Checkout';
@@ -25,7 +25,7 @@ function App() {
               <Route path="/login" element={<LoginClient />} />
               <Route path="/entrar-cadastrar" element={<CadastroClient />} />
               <Route path="/atendimento" element={<AtendimentoClient />} />
-              <Route path="*" element={<div><h1>404 - Página Não Encontrada</h1></div>} />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
           <Footer />
