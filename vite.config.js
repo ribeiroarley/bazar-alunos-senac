@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  base: '/bazar-alunos-senac/', // Caminho para GitHub Pages
   plugins: [react()],
   resolve: {
     alias: [
