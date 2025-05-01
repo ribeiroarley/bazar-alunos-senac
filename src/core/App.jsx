@@ -13,7 +13,7 @@ import '@styles/global/variables.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/bazar-alunos-senac/">
       <CartProvider>
         <div className="app-wrapper">
           <Navbar />
