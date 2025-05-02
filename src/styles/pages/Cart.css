@@ -75,6 +75,11 @@
   display: flex;
   gap: var(--space-md);
   margin-top: var(--space-lg);
+  justify-content: space-between;
+}
+
+.checkout-actions button {
+  flex: 1;
 }
 
 .checkout-btn,
