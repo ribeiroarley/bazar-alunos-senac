@@ -6,10 +6,10 @@ export const products = Array.from({ length: 36 }, (_, i) => {
   return {
     id,
     name: `Camiseta Estilo ${id}`,
-    price: 29.90 + (id % 10), // MANTÉM COMO NÚMERO
+    price: 29.90 + (id % 10),
     color: colors[id % colors.length],
     size: sizes[id % sizes.length],
-    image: `/images/camisetas${id}.jpg`,
+    image: `${import.meta.env.BASE_URL}images/camisetas${id}.jpg`,
     description: `Camiseta premium edição limitada número ${id}`
   };
 });
