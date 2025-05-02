@@ -25,8 +25,7 @@ export default function Home() {
             product.name &&
             typeof product.price === 'number' &&
             product.image &&
-            product.size &&
-            product.color;
+            product.size;
 
           if (!isValidProduct) {
             console.warn('Produto inválido ignorado:', product);
