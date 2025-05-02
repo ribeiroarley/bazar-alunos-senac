@@ -29,13 +29,18 @@
   background: white;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.cart-item:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .cart-item-image {
   width: 100%;
-  height: auto;
+  height: 100px;
+  object-fit: contain;
   border-radius: var(--border-radius-small);
-  object-fit: cover;
 }
 
 .cart-item-details {
@@ -73,44 +78,74 @@
 
 .checkout-actions {
   display: flex;
-  gap: 10px;
-  margin-top: var(--space-lg);
-  justify-content: space-between;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+  justify-content: flex-end;
 }
 
-.checkout-actions button {
-  padding: var(--space-sm) var(--space-md);
-}
-
-.checkout-btn,
-.clear-cart-btn {
-  padding: var(--space-sm) var(--space-md);
+.checkout-btn {
   background-color: var(--primary-color);
   color: white;
+  padding: var(--space-md) var(--space-xl);
   border: none;
   border-radius: var(--border-radius);
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: var(--transition);
 }
 
-.checkout-btn:hover,
+.checkout-btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.clear-cart-btn {
+  background-color: transparent;
+  color: var(--danger-color);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
 .clear-cart-btn:hover {
-  background-color: var(--primary-color-dark);
+  background-color: var(--background-light);
+  border-color: var(--danger-color);
 }
 
 .checkout-btn:disabled,
 .clear-cart-btn:disabled {
-  background-color: var(--disabled-color);
+  background-color: var(--background-light);
+  color: var(--text-light);
+  border-color: var(--border-color);
   cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
 }
 
 @media (max-width: 768px) {
   .cart-item {
-    grid-template-columns: 1fr;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto auto;
   }
-  
+
+  .cart-item-image {
+    grid-row: span 2;
+    height: 80px;
+  }
+
   .checkout-actions {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: var(--space-md);
+  }
+
+  .checkout-btn,
+  .clear-cart-btn {
+    width: 100%;
+    padding: var(--space-md);
   }
 }
