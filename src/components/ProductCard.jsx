@@ -7,8 +7,7 @@ export default function ProductCard({ product }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleAddToCart = () => {
-    // Adicionando valores padrão para size e color
-    addToCart(product, product.size || 'M', product.color || 'preto', 1);
+    addToCart(product, product.size || 'M', 'preto', 1); // cor fixa padrão
   };
 
   return (
@@ -36,10 +35,6 @@ export default function ProductCard({ product }) {
       <div className="product-info">
         <h3>{product.name}</h3>
         <div className="product-meta">
-          <span 
-            className="color-badge" 
-            style={{ '--badge-color': product.color.toLowerCase() }}
-          />
           <span>Tamanho: {product.size}</span>
         </div>
         <p className="price">R$ {product.price.toFixed(2)}</p>
