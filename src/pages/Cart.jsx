@@ -27,7 +27,6 @@ export default function Cart() {
                 <div className="cart-item-details">
                   <h3>{item.name}</h3>
                   <div className="item-meta">
-                    <span>Cor: {item.color}</span>
                     <span>Tamanho: {item.size}</span>
                     <span>Quantidade: {item.quantity}</span>
                   </div>
