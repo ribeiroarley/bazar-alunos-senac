@@ -27,7 +27,7 @@ export default function ProductCard({ product }) {
         />
         {isHovered && (
           <div className="quick-view">
-            Usada
+            Edição Limitada
           </div>
         )}
       </div>
